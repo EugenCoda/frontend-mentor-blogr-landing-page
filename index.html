@@ -19,10 +19,47 @@
   <body>
     <header>
       <nav>
-        <img src="images/logo.svg" alt="logo" />
-        Product Overview Pricing Marketplace Features Integrations Company About
-        Team Blog Careers Connect Contact Newsletter LinkedIn Login
-        <button class="btn btn-white">Sign Up</button>
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" />
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">
+            Product
+            <img src="images/icon-arrow-light.svg" alt="arrow" />
+          </p>
+          <div class="dropdown-content">
+            <a href="#">Overview</a>
+            <a href="#">Pricing</a>
+            <a href="#">Marketplace</a>
+            <a href="#">Features</a>
+            <a href="#">Integrations</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">
+            Company <img src="images/icon-arrow-light.svg" alt="arrow" />
+          </p>
+          <div class="dropdown-content">
+            <a href="#">About</a>
+            <a href="#">Team</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <p class="dropbtn">
+            Connect <img src="images/icon-arrow-light.svg" alt="arrow" />
+          </p>
+          <div class="dropdown-content">
+            <a href="#">Contact</a>
+            <a href="#">Newsletter</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+        <div class="user-menu">
+          <p class="dropbtn login">Login</p>
+          <button class="btn btn-white signup">Sign Up</button>
+        </div>
       </nav>
       <div class="introduction">
         <h1>A modern publishing platform</h1>
@@ -34,25 +71,35 @@
     <main>
       <article class="article-1">
         <h2>Designed for the future</h2>
-        <div class="part-1">
-          <h3>Introducing an extensible editor</h3>
-          <p>
-            Blogr features an exceedingly intuitive interface which lets you
-            focus on one thing: creating content. The editor supports management
-            of multiple blogs and allows easy manipulation of embeds such as
-            images, videos, and Markdown. Extensibility with plugins and themes
-            provide easy ways to add functionality or change the looks of a
-            blog.
-          </p>
-        </div>
-        <div class="part-2">
-          <h3>Robust content management</h3>
-          <p>
-            Flexible content management enables users to easily move through
-            posts. Increase the usability of your blog by adding customized
-            categories, sections, format, or flow. With this functionality,
-            you’re in full control.
-          </p>
+        <div class="article-body">
+          <div class="text">
+            <div class="part-1">
+              <h3>Introducing an extensible editor</h3>
+              <p>
+                Blogr features an exceedingly intuitive interface which lets you
+                focus on one thing: creating content. The editor supports
+                management of multiple blogs and allows easy manipulation of
+                embeds such as images, videos, and Markdown. Extensibility with
+                plugins and themes provide easy ways to add functionality or
+                change the looks of a blog.
+              </p>
+            </div>
+            <div class="part-2">
+              <h3>Robust content management</h3>
+              <p>
+                Flexible content management enables users to easily move through
+                posts. Increase the usability of your blog by adding customized
+                categories, sections, format, or flow. With this functionality,
+                you’re in full control.
+              </p>
+            </div>
+          </div>
+          <div class="img-editor">
+            <img
+              src="images/illustration-editor-desktop.svg"
+              alt="editor image"
+            />
+          </div>
         </div>
       </article>
       <article class="article-2">
