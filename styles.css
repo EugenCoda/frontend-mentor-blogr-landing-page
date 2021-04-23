@@ -46,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--very-dark-blue);
 }
 
@@ -56,9 +56,10 @@ h3 {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--very-dark-grayish-blue);
+  opacity: 0.8;
 }
 
 body {
@@ -90,8 +91,11 @@ header {
 
 header p {
   color: var(--white);
+  opacity: 0.7;
   font-size: 1rem;
 }
+
+/* NAVBAR */
 
 nav {
   margin-bottom: 50px;
@@ -105,6 +109,11 @@ nav .logo {
   margin-right: 30px;
 }
 
+.nav-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -178,6 +187,12 @@ nav .logo {
   align-items: center;
   justify-content: center;
 }
+
+.menu-button {
+  display: none;
+}
+
+/* HEADER CONTENT */
 
 .introduction {
   margin-bottom: 50px;
@@ -254,7 +269,7 @@ article div {
 
 .article-1 h2 {
   text-align: center;
-  margin: 50px 0;
+  margin-bottom: 100px;
 }
 
 .article-body {
@@ -263,18 +278,24 @@ article div {
   position: relative;
 }
 
-.article-body .text {
-  width: 40%;
-}
-
-.article-body .img-editor {
+.article-body .img-editor-desktop {
   position: absolute;
   right: -350px;
   top: -200px;
 }
 
-.article-body .img-editor img {
+.article-body .img-editor-desktop img {
   width: 750px;
+}
+
+.article-body .img-editor-mobile {
+  position: absolute;
+  right: -10000px;
+  top: -10000px;
+}
+
+.article-body .text {
+  width: 45%;
 }
 
 /* MAIN ARTICLE 2 */
@@ -282,7 +303,7 @@ article div {
 .article-2 {
   padding: 50px 150px;
   width: 100%;
-  height: 340px;
+  height: 400px;
   margin-top: 60px;
   margin-bottom: 100px;
   background-image: url("images/bg-pattern-circles.svg");
@@ -305,14 +326,18 @@ article div {
   color: var(--white);
 }
 
+.article-2 .text h2 {
+  margin: 15px 0;
+}
+
 .article-2 .img-phones {
   position: absolute;
-  top: -50px;
+  top: -70px;
   left: 100px;
 }
 
 .article-2 .img-phones img {
-  width: 450px;
+  width: 100%;
 }
 
 .article-2 .text {
@@ -323,7 +348,7 @@ article div {
   flex-direction: column;
 }
 
-/* MAIN ARTICLE 2 */
+/* MAIN ARTICLE 3 */
 
 .article-3 {
   padding: 50px 150px;
@@ -353,20 +378,144 @@ article div {
 /* FOOTER */
 
 footer {
-  padding: 50px 150px;
+  padding: 80px 150px;
   background-color: var(--very-dark-black-blue);
   border-radius: 0 80px 0 0;
   color: var(--white);
   width: 100%;
-  height: 200px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
+.footer-menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-right: 200px;
+  margin-bottom: 50px;
+}
+
+.footer-menu a {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.7;
+  margin-bottom: 15px;
+}
+
+.footer-menu a.first {
+  font-weight: 600;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.footer-menu-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu-3 {
+  display: flex;
+  flex-direction: column;
+}
 /* Attribution */
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.9rem;
   text-align: center;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--light-red);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+  /* HEADER */
+  header {
+    padding: 60px 30px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* MAIN */
+
+  /* MAIN ARTICLE 1 */
+  .article-1 {
+    padding: 70px 30px;
+  }
+
+  .article-body {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .article-body .img-editor-desktop {
+    right: -10000px;
+    top: -10000px;
+  }
+
+  .article-body .img-editor-mobile {
+    width: 100%;
+    position: initial;
+  }
+
+  .article-body .img-editor-mobile img {
+    width: 100%;
+  }
+
+  .article-body .text {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  /* MAIN ARTICLE 2 */
+
+  .article-2 {
+    margin-top: 300px;
+    padding: 50px 30px;
+    height: 800px;
+    background-position: center 180%;
+  }
+
+  .article-2 .img-phones {
+    width: 100%;
+    position: absolute;
+    top: -350px;
+    left: 0;
+  }
+
+  .article-2 .text {
+    width: 100%;
+    margin: 150px 0 0 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  /* MAIN ARTICLE 3 */
+
+  .article-3 {
+    padding: 50px 30px;
+  }
+
+  /* FOOTER */
+
+  footer {
+    padding: 80px 30px;
+  }
 }
