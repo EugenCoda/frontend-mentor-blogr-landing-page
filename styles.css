@@ -111,6 +111,7 @@ nav .logo {
 
 nav .logo img {
   width: 100%;
+  min-width: 80px;
 }
 
 .nav-menu {
@@ -193,6 +194,14 @@ nav .logo img {
 }
 
 .menu-button {
+  margin-left: auto;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.close-btn {
   display: none;
 }
 
@@ -471,28 +480,49 @@ footer {
   .nav-menu.active {
     display: flex;
     flex-direction: column;
-
+    border-radius: 5px;
     background-color: var(--white);
     color: var(--very-dark-grayish-blue);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 40px;
+    top: 60px;
     right: 0;
-    height: 600px;
+    height: 450px;
   }
 
   .nav-menu.active p {
     color: var(--very-dark-grayish-blue);
   }
 
+  /* https://stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element */
+  /* https://codepen.io/sosuke/pen/Pjoqqp */
+  .nav-menu.active p img {
+    filter: invert(78%) sepia(38%) saturate(6729%) hue-rotate(313deg)
+      brightness(107%) contrast(103%);
+  }
+
   .nav-menu.active .user-menu {
     flex-direction: column;
     margin: 0;
-    text-align: center;
   }
 
-  .menu-button {
+  .dropdown-content {
+    background-color: rgb(225, 219, 219);
+  }
+
+  .btn.btn-white.signup {
+    margin-left: 0;
+    background-image: linear-gradient(
+      to right,
+      var(--very-light-red),
+      var(--light-red)
+    );
+    color: var(--white);
+    border: 1px solid #ff677a;
+  }
+
+  .menu-btn {
     display: block;
-    margin-left: auto;
   }
 
   /* HEADER CONTENT */
@@ -566,7 +596,7 @@ footer {
   .article-2 .img-phones {
     width: 100%;
     position: absolute;
-    top: -170px;
+    top: -200px;
     left: 0;
   }
 
@@ -601,9 +631,10 @@ footer {
   }
 
   .article-3 .article-body .img-laptop-mobile {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    position: initial;
     overflow: hidden;
   }
 
